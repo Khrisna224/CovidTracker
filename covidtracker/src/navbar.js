@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 
-function navbar() {
+const navbar = () => {
   return (
     <div>
       <nav>

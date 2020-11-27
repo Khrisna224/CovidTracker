@@ -1,9 +1,25 @@
-import {Link, Route, Switch} from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
-function Global() {
+
+const Global = () => {
+  const [world, setWorld] = useState([])
+
+  useEffect(() => {
+    axios.get("https://covid19.mathdro.id/api")
+      .then((res) =>
+        setWorld(res.data)
+      )
+  })
+
+  console.log(world)
+  const formatter = new Intl.NumberFormat('en')
   return (
     <div>
       <h1>Global</h1>
+      <h1>Confirm: {formatter.format(world.confirmed.value)}</h1>
+      <h1>Recovered: {formatter.format(world.deaths.value)}</h1>
+      <h1>Death: {formatter.format(world.recovered.value)}</h1>
     </div>
   );
 }

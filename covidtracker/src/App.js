@@ -2,12 +2,12 @@ import {Route, Switch} from 'react-router-dom'
 import global from './global'
 import indonesia from './indonesia';
 import provinsi from './provinsi';
-import Navigasi from './navbar'
+import Navbar from './navbar'
 
 function App() {
   return (
     <div>
-      <Navigasi />
+      <Navbar />
       <Switch>
         <Route exact path='/' component={global}/>
         <Route path='/indonesia' component={indonesia}/>
