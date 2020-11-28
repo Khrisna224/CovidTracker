@@ -1,8 +1,8 @@
 import {Route, Switch} from 'react-router-dom'
-import global from './global'
-import indonesia from './indonesia';
-import provinsi from './provinsi';
-import Navbar from './navbar'
+import global from './page/global'
+import indonesia from './page/indonesia';
+import provinsi from './page/provinsi';
+import Navbar from './components/navbar'
 
 function App() {
   return (
