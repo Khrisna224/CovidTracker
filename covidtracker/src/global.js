@@ -19,14 +19,25 @@ const Global = () => {
   const formatter = new Intl.NumberFormat('en')
   return (
     <div className="container">
-      <h1>Global</h1>
-      <h1>Confirm: </h1>
-      <h1>Recovered: {formatter.format(recovered)}</h1>
-      <h1>Death: {formatter.format(death)}</h1>
-      <div className="card text-white text-center bg-warning w-25">
-        <div className="card-header"><h5 className='card-title'>Confirmed</h5></div>
-        <div className="card-body">
-          <h3 className="card-text">{formatter.format(confirm)}</h3>
+      <h2>Global Case</h2>
+      <div className='row card-columns'>
+        <div className="card text-white text-center bg-warning w-25">
+          <div className="card-header"><h5 className='card-title'>Confirmed</h5></div>
+          <div className="card-body">
+            <h3 className="card-text">{formatter.format(confirm)}</h3>
+          </div>
+        </div>
+        <div className="card text-white text-center bg-success w-25">
+          <div className="card-header"><h5 className='card-title'>Recovered</h5></div>
+          <div className="card-body">
+            <h3 className="card-text">{formatter.format(recovered)}</h3>
+          </div>
+        </div>
+        <div className="card text-white text-center bg-danger w-25">
+          <div className="card-header"><h5 className='card-title'>Deaths</h5></div>
+          <div className="card-body">
+            <h3 className="card-text">{formatter.format(death)}</h3>
+          </div>
         </div>
       </div>
     </div>

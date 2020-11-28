@@ -1,29 +1,37 @@
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const navbar = () => {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to='/'>Global</Link>
-          </li>
-          <li>
-            <Link to='/indonesia'>Indonesia</Link>
-          </li>
-          <li>
-            <Link to='/provinsi'>Provinsi</Link>
-          </li>
-        </ul>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <Link to='/' className="navbar-brand">CovidTracker</Link>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to='/' className="nav-link">Global</Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/indonesia' className="nav-link">Indonesia</Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/provinsi' className="nav-link">Provinsi</Link>
+            </li>
+          </ul>
+        </div>
       </nav>
       {/* <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  <ol className="breadcrumb">
+    <li className="breadcrumb-item"><a href="#">Home</a></li>
+    <li className="breadcrumb-item active" aria-current="page">Library</li>
   </ol>
 </nav> */}
     </div>
   );
 }
+
+
 
 export default navbar;
