@@ -1,7 +1,6 @@
 import Card from "../components/card";
 
 export const countrySelected = (country) => {
-  console.log(country);
   if (country.set === false) {
     return;
   } else {

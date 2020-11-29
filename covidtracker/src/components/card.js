@@ -2,12 +2,6 @@ import { formatter } from '../utils/formatNumber'
 
 const Card = ({ confirm, recovered, death }) => {
     return (
-        // <div className="card-container">
-        //     <p>{name}</p>
-        //     <p>{institution}</p>
-        //     <p>{address}</p>
-        //     <p>{phoneNumber}</p>
-        // </div>
         <div className='row card-columns'>
             <div className="card text-white text-center bg-warning w-25">
                 <div className="card-header"><h5 className='card-title'>Confirmed</h5></div>

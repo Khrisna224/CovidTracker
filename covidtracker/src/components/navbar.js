@@ -14,6 +14,9 @@ const navbar = () => {
               <Link to='/' className="nav-link">Global</Link>
             </li>
             <li className="nav-item">
+              <Link to='/country' className="nav-link">Country</Link>
+            </li>
+            <li className="nav-item">
               <Link to='/indonesia' className="nav-link">Indonesia</Link>
             </li>
             <li className="nav-item">
