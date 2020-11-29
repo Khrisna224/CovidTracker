@@ -3,16 +3,17 @@ import axios from 'axios'
 import Card from "../components/card"
 
 const Indonesia =()=> {
-  const [confirm, setConfirm] = useState()
-  const [death, setDeath] = useState()
-  const [recovered, setRecovered] = useState()
+  const [indo, setIndo] = useState({confirm:NaN,death:NaN,recovered:NaN})
 
   useEffect(() => {
     axios.get("https://indonesia-covid-19.mathdro.id/api")
       .then((res) => {
-        setConfirm(res.data.perawatan)
-        setDeath(res.data.meninggal)
-        setRecovered(res.data.sembuh)
+        setIndo(
+          {
+            confirm: res.data.jumlahKasus,
+            death: res.data.meninggal,
+            recovered: res.data.sembuh
+          })
       })
       .catch((err) => console.log(err))
   })
@@ -22,9 +23,9 @@ const Indonesia =()=> {
     <div className='container'>
       <h2>Indonesia Case</h2>
       <Card 
-      confirm={confirm}
-      recovered={recovered}
-      death={death} />
+      confirm={indo.confirm}
+      recovered={indo.recovered}
+      death={indo.death} />
     </div>
   );
 }
